@@ -1,16 +1,9 @@
 import { Box, Center, Heading,  ListItem, SimpleGrid, UnorderedList } from '@chakra-ui/react'
-import { AiFillGithub } from 'react-icons/ai'
+
 
 function MyProjects() {
   return (
     <>
-      <Heading size={"md"}>
-        <a href="https://github.com/Ali7U">
-          {" "}
-          <AiFillGithub />
-          My GitHub
-        </a>{" "}
-      </Heading>
       <Box m={25}>
         
       <Center >

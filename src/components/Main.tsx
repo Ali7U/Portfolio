@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import img from "../assets/Untitled-design-50.webp";
 import { AiFillHtml5 } from "react-icons/ai";
-import { BsGit, BsGithub } from "react-icons/bs";
 import { FaBootstrap, FaCss3Alt, FaNode, FaReact } from "react-icons/fa";
 import {
   SiChakraui,
@@ -85,12 +84,6 @@ function Main() {
                 </Box>
                 <Box>
                   <FaReact fontSize={50} />
-                </Box>
-                <Box>
-                  <BsGit fontSize={50} />
-                </Box>
-                <Box>
-                  <BsGithub fontSize={50} />
                 </Box>
                 <Box>
                   <SiMongodb fontSize={50} />
