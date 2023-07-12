@@ -1,4 +1,10 @@
-import { Box, Center, Heading, SimpleGrid } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Heading,
+  SimpleGrid,
+  useColorMode,
+} from "@chakra-ui/react";
 import { AiFillHtml5 } from "react-icons/ai";
 import { FaReact, FaBootstrap, FaCss3Alt, FaNode } from "react-icons/fa";
 import {
@@ -13,18 +19,20 @@ import {
 } from "react-icons/si";
 
 function Experence() {
+  const { colorMode } = useColorMode();
+  const isDark = colorMode === "dark";
   return (
     <Center>
       <SimpleGrid columns={[1, 3, 3, 3]} gap={50}>
         <Box className="box">
           <Heading>1+</Heading>
-          <Heading size={"md"} color={"#F0F0F0"}>
+          <Heading size={"md"} color={isDark ? "#F0F0F0" : "#393646"}>
             Experence
           </Heading>
         </Box>
-        <Box className="box bg1">
+        <Box className="box" bg={isDark ? "#454545" : "#A8A196"}>
           <Heading>Front-End</Heading>
-          <Box className="smpGrid ">
+          <Box className="smpGrid">
             {" "}
             <FaReact fontSize={40} />
             <FaBootstrap fontSize={40} />
@@ -35,7 +43,7 @@ function Experence() {
             <SiTypescript fontSize={40} />
           </Box>
         </Box>
-        <Box className="box bg2">
+        <Box className="box" bg={isDark ? "#394867" : "#9BA4B5"}>
           <Heading>Back-End</Heading>
           <Box className="smpGrid">
             {" "}

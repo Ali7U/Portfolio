@@ -12,17 +12,3 @@
   grid-template-columns: repeat(4, 55px);
   gap: 6px;
 }
-.bg1 {
-  background-color: #454545;
-}
-.bg1:hover {
-  background-color: #2D2727;
-
-}
-.bg2 {
-  background-color: #394867;
-}
-.bg2:hover{
-  background-color: #212A3E;
-
-}
