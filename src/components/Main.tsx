@@ -10,7 +10,14 @@ import {
 } from "@chakra-ui/react";
 import img from "../assets/Untitled-design-50.webp";
 import { AiFillHtml5 } from "react-icons/ai";
-import { FaBootstrap, FaCss3Alt, FaNode, FaReact } from "react-icons/fa";
+import {
+  FaBootstrap,
+  FaCss3Alt,
+  FaNode,
+  FaReact,
+  FaAngular,
+} from "react-icons/fa";
+
 import {
   SiChakraui,
   SiExpress,
@@ -20,14 +27,18 @@ import {
   SiPostman,
   SiPrisma,
   SiTypescript,
+  SiDotnet,
 } from "react-icons/si";
+import { PrimeIcons } from "primereact/api";
+
 import Experence from "./Experence";
 
 function Main() {
+  console.log(PrimeIcons);
   return (
     <>
       <Heading textAlign={"left"}>
-        Hey! I'm <Text color="#99DBF5">Ali Ibrahim</Text>
+        Hey! I'm <Text color="#99DBF5">Ali AlGuadeb</Text>
       </Heading>
       <Center>
         <Box p={10}>
@@ -96,6 +107,15 @@ function Main() {
                 </Box>
                 <Box>
                   <SiChakraui fontSize={50} />
+                </Box>
+                <Box>
+                  <FaAngular fontSize={50} />{" "}
+                </Box>
+                <Box>
+                  <SiDotnet fontSize={50} />
+                </Box>
+                <Box display={'flex'} alignItems={'center'}>
+                  <i className={PrimeIcons.PRIME}  style={{ fontSize: '40px' }}></i>
                 </Box>
               </SimpleGrid>
             </UnorderedList>

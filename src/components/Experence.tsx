@@ -30,7 +30,7 @@ function Experence() {
             Experence
           </Heading>
         </Box>
-        <Box className="box" bg={isDark ? "#454545" : "#A8A196"}>
+        <Box className="box" bg={isDark ? "#27374D" : "#EEEDED"}>
           <Heading>Front-End</Heading>
           <Box className="smpGrid">
             {" "}
@@ -43,7 +43,7 @@ function Experence() {
             <SiTypescript fontSize={40} />
           </Box>
         </Box>
-        <Box className="box" bg={isDark ? "#394867" : "#9BA4B5"}>
+        <Box className="box" bg={isDark ? "#394867" : "#EAF6F6"}>
           <Heading>Back-End</Heading>
           <Box className="smpGrid">
             {" "}
