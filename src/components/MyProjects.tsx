@@ -13,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
-import { PrimeIcons } from "primereact/api";
 import { FaGithub } from "react-icons/fa";
 
 interface IProjects {
@@ -24,7 +23,6 @@ interface IProjects {
   frameWork: string;
 }
 
-// https://65f2bd66a7ffb3a13ec2ec9f--search-wikipedia-app2.netlify.app
 const projects: IProjects[] = [
   {
     projectName: "Password Generator",
