@@ -133,7 +133,11 @@ function MyProjects() {
                 <Box bg={isDark ? "#31363F" : "#EEEDED"}>
                   <AccordionPanel pb={4}>
                     <Box>
-                      <Link to={""} position={"absolute"} right={"29%"}>
+                      <Link
+                        href={"https://github.com/Ali7U"}
+                        position={"absolute"}
+                        right={"29%"}
+                      >
                         <FaGithub position={"absolute"} />
                       </Link>
                     </Box>
@@ -156,7 +160,6 @@ function MyProjects() {
                       >
                         Visit Website <ExternalLinkIcon mx="2px" />
                       </Link>
-
                     </AccordionPanel>
                   ) : (
                     ""

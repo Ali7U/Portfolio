@@ -29,12 +29,10 @@ import {
   SiTypescript,
   SiDotnet,
 } from "react-icons/si";
-import { PrimeIcons } from "primereact/api";
 
 import Experence from "./Experence";
 
 function Main() {
-  console.log(PrimeIcons);
   return (
     <>
       <Heading textAlign={"left"}>
@@ -114,8 +112,8 @@ function Main() {
                 <Box>
                   <SiDotnet fontSize={50} />
                 </Box>
-                <Box display={'flex'} alignItems={'center'}>
-                  <i className={PrimeIcons.PRIME}  style={{ fontSize: '40px' }}></i>
+                <Box display={"flex"} alignItems={"center"}>
+                  <i className="pi pi-prime" style={{ fontSize: "40px" }}></i>
                 </Box>
               </SimpleGrid>
             </UnorderedList>
