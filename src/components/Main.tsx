@@ -57,7 +57,7 @@ function Main() {
             window.open("https://www.linkedin.com/in/ali-al-guadeb/")
           }
         >
-          Hire me
+          My LinkedIn{" "}
         </Button>
       </Center>
       <Center>
