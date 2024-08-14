@@ -36,7 +36,7 @@ function Main() {
   return (
     <>
       <Heading textAlign={"left"}>
-        Hey! I'm <Text color="#99DBF5">Ali AlGuadeb</Text>
+        Hey! I'm <Text color="#99DBF5">Ali AlGuaideb</Text>
       </Heading>
       <Center>
         <Box p={[5, 10]}>
