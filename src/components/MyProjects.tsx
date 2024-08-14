@@ -117,7 +117,7 @@ function MyProjects() {
           <Heading size="lg">My Projects:</Heading>
         </Center>
         <Center>
-          <Accordion w={"50%"}>
+          <Accordion w={["100%", "100%", "75%", "50%"]}>
             {projects.map((item) => (
               <AccordionItem>
                 <h2>
@@ -129,17 +129,21 @@ function MyProjects() {
                   </AccordionButton>
                 </h2>
                 <Box bg={isDark ? "#31363F" : "#EEEDED"}>
-                  <AccordionPanel pb={4}>
+                  <AccordionPanel
+                    pb={4}
+                    display={"flex"}
+                    flexWrap={"wrap"}
+                    flexDirection={"row-reverse"}
+                    justifyContent={"space-between"}
+                  >
                     <Box>
-                      <Link
-                        href={"https://github.com/Ali7U"}
-                        position={"absolute"}
-                        right={"29%"}
-                      >
-                        <FaGithub position={"absolute"} />
+                      <Link href={"https://github.com/Ali7U"}>
+                        <FaGithub />
                       </Link>
                     </Box>
-                    type: {item.type} - {item.frameWork}
+                    <Box>
+                      type: {item.type} - {item.frameWork}
+                    </Box>
                   </AccordionPanel>
                   <Divider />
                   {item.urlDeploy ? (

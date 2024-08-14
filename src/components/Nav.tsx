@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   chakra,
@@ -14,10 +14,19 @@ import { Link } from "react-router-dom";
 import { FaSun, FaMoon, FaGithub, FaLinkedin, FaDev } from "react-icons/fa";
 
 export default function App() {
+  const [width, setWidth] = useState(window.innerWidth);
   const bg = useColorModeValue("white", "gray.800");
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
 
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <React.Fragment>
       <chakra.header
@@ -55,14 +64,18 @@ export default function App() {
             <Text as={"h6"} size={"s"} cursor={"pointer"} fontWeight={"bold"}>
               <Link to={"/my-projects"}>My Projects</Link>
             </Text>
-            <IconButton
-              ml="2"
-              aria-label=""
-              icon={<FaLinkedin />}
-              onClick={() =>
-                window.open("https://www.linkedin.com/in/ali-al-guadeb/")
-              }
-            />{" "}
+            {width >= 370 ? (
+              <IconButton
+                ml="2"
+                aria-label=""
+                icon={<FaLinkedin />}
+                onClick={() =>
+                  window.open("https://www.linkedin.com/in/ali-al-guadeb/")
+                }
+              />
+            ) : (
+              ""
+            )}
             <IconButton
               ml="2"
               aria-label=""

@@ -39,7 +39,7 @@ function Main() {
         Hey! I'm <Text color="#99DBF5">Ali AlGuadeb</Text>
       </Heading>
       <Center>
-        <Box p={10}>
+        <Box p={[5, 10]}>
           <Text fontSize={"20px"}>I'm Full-Stack Developer with</Text>
           <Text fontSize={"20px"}>strong knowledge in web development</Text>
         </Box>
@@ -66,7 +66,7 @@ function Main() {
             <Heading color={"#99DBF5"}>My Skills :</Heading>
 
             <UnorderedList>
-              <SimpleGrid padding={15} columns={6} spacing={5}>
+              <SimpleGrid padding={15} columns={[3, 4, 5, 6]} spacing={5}>
                 <Box>
                   <AiFillHtml5 fontSize={50} />
                 </Box>
