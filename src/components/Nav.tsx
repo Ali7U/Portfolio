@@ -14,19 +14,10 @@ import { Link } from "react-router-dom";
 import { FaSun, FaMoon, FaGithub, FaLinkedin, FaDev } from "react-icons/fa";
 
 export default function App() {
-  // const [width, setWidth] = useState(window.innerWidth);
   const bg = useColorModeValue("white", "gray.800");
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
 
-  // useEffect(() => {
-  //   const handleResize = () => setWidth(window.innerWidth);
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
   return (
     <React.Fragment>
       <chakra.header
