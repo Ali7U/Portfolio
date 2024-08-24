@@ -25,6 +25,18 @@ interface IProjects {
 
 const projects: IProjects[] = [
   {
+    projectName: "E-Commerence",
+    type: "Frontend",
+    frameWork: "Angular",
+    urlDeploy: "https://angular-ecommerence.netlify.app/",
+  },
+  {
+    projectName: "Email App",
+    type: "Frontend",
+    frameWork: "Angular",
+    urlDeploy: "https://ali-email.netlify.app/",
+  },
+  {
     projectName: "Password Generator",
     type: "Frontend",
     frameWork: "Angular",
