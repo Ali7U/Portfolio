@@ -35,7 +35,7 @@ import Experence from "./Experence";
 function Main() {
   return (
     <>
-      <Heading textAlign={"left"}>
+      <Heading textAlign={["left", "center"]}>
         Hey! I'm <Text color="#99DBF5">Ali AlGuadeb</Text>
       </Heading>
       <Center>
@@ -82,11 +82,11 @@ function Main() {
                 <Box>
                   <FaNode fontSize={50} />
                 </Box>
-                <Box>
-                  <SiExpress fontSize={50} />
+                <Box >
+                  <SiExpress fontSize={50} color="blue" />
                 </Box>
                 <Box>
-                  <SiPrisma fontSize={50} />
+                  <SiPrisma fontSize={50}  />
                 </Box>
                 <Box>
                   <FaBootstrap fontSize={50} />

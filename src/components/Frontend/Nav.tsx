@@ -50,10 +50,10 @@ export default function App() {
               fontWeight={"bold"}
               pr={5}
             >
-              <Link to={"/"}>Home</Link>
+              <Link to={"/Frontend"}>Home</Link>
             </Text>
             <Text as={"h6"} size={"s"} cursor={"pointer"} fontWeight={"bold"}>
-              <Link to={"/my-projects"}>My Projects</Link>
+              <Link to={"Frontend/my-projects"}>My Projects</Link>
             </Text>
             {/* {width >= 370 ? ( */}
             <IconButton
@@ -62,7 +62,7 @@ export default function App() {
               aria-label=""
               icon={<FaLinkedin />}
               onClick={() =>
-                window.open("https://www.linkedin.com/in/ali-al-guadeb/")
+                window.open("https://www.linkedin.com/in/ali-al-guaideb/")
               }
             />
             {/* ) : (

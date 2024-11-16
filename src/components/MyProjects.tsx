@@ -23,7 +23,7 @@ interface IProjects {
   frameWork: string;
 }
 
-const projects: IProjects[] = [
+export const projects: IProjects[] = [
   {
     projectName: "E-Commerence",
     type: "Frontend",
@@ -117,6 +117,21 @@ const projects: IProjects[] = [
     type: "Frontend",
     frameWork: "React",
     urlDeploy: "https://react-pizza-cart.pages.dev/",
+  },
+];
+
+const publicProjects: IProjects[] = [
+  {
+    projectName: "Siwar",
+    type: "Frontend",
+    frameWork: "Angular",
+    url: "https://siwar.ksaa.gov.sa/home",
+  },
+  {
+    projectName: "Riyadh Dictionary",
+    type: "Frontend",
+    frameWork: "React",
+    urlDeploy: "https://dictionary.ksaa.gov.sa",
   },
 ];
 function MyProjects() {
