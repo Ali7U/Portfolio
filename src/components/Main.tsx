@@ -47,7 +47,7 @@ function Main() {
       </Heading>
       <Center>
         <Box p={[5, 10]}>
-          <Text fontSize={[16, 20]}>I'm Full-Stack Developer with</Text>
+          <Text fontSize={[16, 20]}>I'm Software Engineer with</Text>
           <Text fontSize={[16, 20]}>strong knowledge in web development</Text>
         </Box>
         <Box borderRadius={"50%"} width={"300px"}>
@@ -70,7 +70,9 @@ function Main() {
       <Center>
         <SimpleGrid>
           <Box>
-            <Heading color={"#99DBF5"} fontSize={[20, 26]}>My Skills :</Heading>
+            <Heading color={"#99DBF5"} fontSize={[20, 26]}>
+              My Skills :
+            </Heading>
 
             <UnorderedList>
               <SimpleGrid padding={15} columns={[4, 4, 5, 6]} spacing={5}>
