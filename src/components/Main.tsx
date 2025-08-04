@@ -35,13 +35,20 @@ import Experence from "./Experence";
 function Main() {
   return (
     <>
-      <Heading textAlign={["left", "center"]}>
-        Hey! I'm <Text color="#99DBF5">Ali AlGuadeb</Text>
+      <Heading
+        textAlign={["left", "center"]}
+        display={"flex"}
+        justifyContent={"center"}
+        flexDirection={["column", "row"]}
+        gap={2}
+      >
+        <Text> Hey! I'm</Text>
+        <Text color="#99DBF5">Ali AlGuadeb</Text>
       </Heading>
       <Center>
         <Box p={[5, 10]}>
-          <Text fontSize={"20px"}>I'm Full-Stack Developer with</Text>
-          <Text fontSize={"20px"}>strong knowledge in web development</Text>
+          <Text fontSize={[16, 20]}>I'm Full-Stack Developer with</Text>
+          <Text fontSize={[16, 20]}>strong knowledge in web development</Text>
         </Box>
         <Box borderRadius={"50%"} width={"300px"}>
           <Image src={img} />
@@ -63,7 +70,7 @@ function Main() {
       <Center>
         <SimpleGrid>
           <Box>
-            <Heading color={"#99DBF5"}>My Skills :</Heading>
+            <Heading color={"#99DBF5"} fontSize={[20, 26]}>My Skills :</Heading>
 
             <UnorderedList>
               <SimpleGrid padding={15} columns={[4, 4, 5, 6]} spacing={5}>
@@ -82,11 +89,11 @@ function Main() {
                 <Box>
                   <FaNode fontSize={50} />
                 </Box>
-                <Box >
-                  <SiExpress fontSize={50} color="blue" />
+                <Box>
+                  <SiExpress fontSize={50} />
                 </Box>
                 <Box>
-                  <SiPrisma fontSize={50}  />
+                  <SiPrisma fontSize={50} />
                 </Box>
                 <Box>
                   <FaBootstrap fontSize={50} />
