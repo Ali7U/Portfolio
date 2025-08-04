@@ -73,7 +73,7 @@ function Main() {
             <UnorderedList>
               <SimpleGrid padding={15} columns={[4, 4, 5, 6]} spacing={5}>
                 <Box>
-                  <AiFillHtml5 fontSize={50} isFront={true} />
+                  <AiFillHtml5 fontSize={50} />
                 </Box>
                 <Box>
                   <FaCss3Alt fontSize={50} />
