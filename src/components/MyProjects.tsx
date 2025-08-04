@@ -129,9 +129,9 @@ export const projects: IProjects[] = [
 const publicProjects: IProjects[] = [
   {
     projectName: "Siwar",
-    type: "Frontend",
-    frameWork: "Angular",
-    url: "https://siwar.ksaa.gov.sa/home",
+    type: "Full-Stack",
+    frameWork: "Angular, NestJS",
+    urlDeploy: "https://siwar.ksaa.gov.sa/home",
   },
   {
     projectName: "Riyadh Dictionary",
@@ -147,7 +147,65 @@ function MyProjects() {
     <>
       <Box m={25}>
         <Center>
-          <Heading size="lg">My Projects:</Heading>
+          <Heading size="lg">Public Projects:</Heading>
+        </Center>
+        <Center pb={10}>
+          <Accordion w={["100%", "100%", "75%", "50%"]}>
+            {publicProjects.map((item) => (
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box as="span" flex="1" textAlign="left">
+                      {item.projectName}
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <Box bg={isDark ? "#31363F" : "#EEEDED"}>
+                  <AccordionPanel
+                    pb={4}
+                    display={"flex"}
+                    flexWrap={"wrap"}
+                    flexDirection={"row-reverse"}
+                    justifyContent={"space-between"}
+                  >
+                    <Box>
+                      <Link href={"https://github.com/Ali7U"}>
+                        <FaGithub />
+                      </Link>
+                    </Box>
+                    <Box>
+                      type: {item.type} - {item.frameWork}
+                    </Box>
+                  </AccordionPanel>
+                  <Divider />
+                  {item.urlDeploy ? (
+                    <AccordionPanel
+                      pb={4}
+                      display={"flex"}
+                      justifyContent={"space-between"}
+                      alignItems={"center"}
+                      w={150}
+                    >
+                      <Link
+                        href={item.urlDeploy}
+                        isExternal
+                        display={"flex"}
+                        alignItems={"center"}
+                      >
+                        Visit Website <ExternalLinkIcon mx="2px" />
+                      </Link>
+                    </AccordionPanel>
+                  ) : (
+                    ""
+                  )}
+                </Box>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Center>
+        <Center>
+          <Heading size="lg">Private Projects:</Heading>
         </Center>
         <Center>
           <Accordion w={["100%", "100%", "75%", "50%"]}>
