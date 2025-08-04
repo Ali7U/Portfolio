@@ -2,17 +2,10 @@
 
 .box {
   width: 250px;
-  padding: 20px;
   height: 180px;
   border-radius: 15px;
-  cursor: pointer;
   transition: 0.8s;
   margin-top: 10px;
-}
-.smpGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 55px);
-  gap: 6px;
 }
 
 a > i:hover {

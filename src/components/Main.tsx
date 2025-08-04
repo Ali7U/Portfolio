@@ -4,33 +4,13 @@ import {
   Image,
   SimpleGrid,
   Heading,
-  UnorderedList,
   Text,
   Button,
 } from "@chakra-ui/react";
 import img from "../assets/Untitled-design-50.webp";
-import { AiFillHtml5 } from "react-icons/ai";
-import {
-  FaBootstrap,
-  FaCss3Alt,
-  FaNode,
-  FaReact,
-  FaAngular,
-} from "react-icons/fa";
-
-import {
-  SiChakraui,
-  SiExpress,
-  SiJavascript,
-  SiMongodb,
-  SiMysql,
-  SiPostman,
-  SiPrisma,
-  SiTypescript,
-  SiDotnet,
-} from "react-icons/si";
 
 import Experence from "./Experence";
+import SkillsGroup from "./shared/SkillsGroup";
 
 function Main() {
   return (
@@ -74,58 +54,9 @@ function Main() {
               My Skills :
             </Heading>
 
-            <UnorderedList>
-              <SimpleGrid padding={15} columns={[4, 4, 5, 6]} spacing={5}>
-                <Box>
-                  <AiFillHtml5 fontSize={50} />
-                </Box>
-                <Box>
-                  <FaCss3Alt fontSize={50} />
-                </Box>
-                <Box>
-                  <SiJavascript fontSize={50} />
-                </Box>
-                <Box>
-                  <SiTypescript fontSize={50} />
-                </Box>
-                <Box>
-                  <FaNode fontSize={50} />
-                </Box>
-                <Box>
-                  <SiExpress fontSize={50} />
-                </Box>
-                <Box>
-                  <SiPrisma fontSize={50} />
-                </Box>
-                <Box>
-                  <FaBootstrap fontSize={50} />
-                </Box>
-                <Box>
-                  <FaReact fontSize={50} />
-                </Box>
-                <Box>
-                  <SiMongodb fontSize={50} />
-                </Box>
-                <Box>
-                  <SiMysql fontSize={50} />
-                </Box>
-                <Box>
-                  <SiPostman fontSize={50} />
-                </Box>
-                <Box>
-                  <SiChakraui fontSize={50} />
-                </Box>
-                <Box>
-                  <FaAngular fontSize={50} />{" "}
-                </Box>
-                <Box>
-                  <SiDotnet fontSize={50} />
-                </Box>
-                <Box display={"flex"} alignItems={"center"}>
-                  <i className="pi pi-prime" style={{ fontSize: "40px" }}></i>
-                </Box>
-              </SimpleGrid>
-            </UnorderedList>
+            <Box mb={10}>
+              <SkillsGroup isMain />
+            </Box>
           </Box>
         </SimpleGrid>
       </Center>
