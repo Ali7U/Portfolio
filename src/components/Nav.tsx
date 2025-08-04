@@ -49,17 +49,10 @@ export default function App() {
               cursor={"pointer"}
               fontWeight={"bold"}
               pr={5}
-              fontSize={[14, 16]}
             >
               <Link to={"/"}>Home</Link>
             </Text>
-            <Text
-              as={"h6"}
-              size={"s"}
-              cursor={"pointer"}
-              fontWeight={"bold"}
-              fontSize={[14, 16]}
-            >
+            <Text as={"h6"} size={"s"} cursor={"pointer"} fontWeight={"bold"}>
               <Link to={"/my-projects"}>My Projects</Link>
             </Text>
             {/* {width >= 370 ? ( */}

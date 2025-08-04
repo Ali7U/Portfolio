@@ -31,17 +31,12 @@ import {
 } from "react-icons/si";
 
 import Experence from "./Experence";
+
 function Main() {
   return (
     <>
-      <Heading
-        display={"flex"}
-        flexDirection={["column", "row"]}
-        justifyContent={"center"}
-        gap={2}
-      >
-        <Text> Hey! I'm</Text>
-        <Text color="#99DBF5">Ali AlGuadeb</Text>
+      <Heading textAlign={["left", "center"]}>
+        Hey! I'm <Text color="#99DBF5">Ali AlGuadeb</Text>
       </Heading>
       <Center>
         <Box p={[5, 10]}>
@@ -87,11 +82,11 @@ function Main() {
                 <Box>
                   <FaNode fontSize={50} />
                 </Box>
-                <Box>
-                  <SiExpress fontSize={50} />
+                <Box >
+                  <SiExpress fontSize={50} color="blue" />
                 </Box>
                 <Box>
-                  <SiPrisma fontSize={50} />
+                  <SiPrisma fontSize={50}  />
                 </Box>
                 <Box>
                   <FaBootstrap fontSize={50} />
