@@ -25,6 +25,12 @@ interface IProjects {
 
 export const projects: IProjects[] = [
   {
+    projectName: "Fake Store",
+    urlDeploy: "https://fake-store-app-angular.netlify.app/",
+    type: "Frontend",
+    frameWork: "Angular",
+  },
+  {
     projectName: "E-Commerence",
     type: "Frontend",
     frameWork: "Angular",
