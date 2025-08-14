@@ -10,6 +10,7 @@ import {
   Heading,
   Link,
   useColorMode,
+  Tooltip,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
@@ -23,27 +24,35 @@ interface IProjects {
   frameWork: string;
 }
 
+function formatUrl(name: string): string {
+  return "https://github.com/Ali7U/" + name.toLowerCase().replace(/\s+/g, "-");
+}
+
 export const projects: IProjects[] = [
   {
     projectName: "Fake Store",
+    url: formatUrl("Fake Store"),
     urlDeploy: "https://fake-store-app-angular.netlify.app/",
     type: "Frontend",
     frameWork: "Angular",
   },
   {
     projectName: "E-Commerence",
+    url: formatUrl("Angular-ECommerence"),
     type: "Frontend",
     frameWork: "Angular",
     urlDeploy: "https://angular-ecommerence.netlify.app/",
   },
   {
     projectName: "Email App",
+    url: formatUrl("Angular_Email"),
     type: "Frontend",
     frameWork: "Angular",
     urlDeploy: "https://ali-email.netlify.app/",
   },
   {
     projectName: "Password Generator",
+    url: formatUrl("Angular Password Generator"),
     type: "Frontend",
     frameWork: "Angular",
     urlDeploy:
@@ -51,75 +60,101 @@ export const projects: IProjects[] = [
   },
   {
     projectName: "Pizza Resturant",
+    url: formatUrl("Frontend-Resturant-Management"),
     type: "Full-Stack",
     frameWork: "React - ExpressJS",
   },
   {
     projectName: "College System",
+    url: formatUrl("College System "),
     type: "Full-Stack",
     frameWork: "React - ExpressJS",
   },
   {
     projectName: "Search Wikipedia App",
+    url: formatUrl("Search Wikipedia App"),
     type: "Frontend",
     frameWork: "Angular",
     urlDeploy:
       "https://65f2bd66a7ffb3a13ec2ec9f--search-wikipedia-app2.netlify.app",
   },
-  {
-    projectName: "Random Image App",
-    type: "Frontend",
-    frameWork: "Angular",
-    urlDeploy: "https://65f2bc0fbacbc89d95a0ed0a--random-image-app.netlify.app",
-  },
+
   {
     projectName: "Weather App",
+    url: formatUrl("Weather Application"),
     type: "Frontend",
     frameWork: "React",
     urlDeploy: "https://weather-application.pages.dev",
   },
   {
     projectName: "Weather App 2",
+    url: formatUrl("Weather App2"),
     type: "Frontend",
     frameWork: "React",
     urlDeploy: "https://weather-app2.pages.dev",
   },
-  { projectName: "ToDo List", type: "Frontend", frameWork: "React" },
+
   {
     projectName: "E-commerance Food",
+    url: formatUrl("E-commerance Food"),
     type: "Frontend",
     frameWork: "React",
     urlDeploy: "https://e-commernce-app.pages.dev",
   },
-  { projectName: "Shopping Cart Phones", type: "Frontend", frameWork: "React" },
+  {
+    projectName: "Shopping Cart Phones",
+    url: formatUrl("Shopping Cart Phones"),
+    type: "Frontend",
+    frameWork: "React",
+  },
   {
     projectName: "Coffee App",
+    url: formatUrl("Coffee App"),
     type: "Frontend",
     frameWork: "React",
     urlDeploy: "https://coffee-cart-5ep.pages.dev/cart",
   },
   {
     projectName: "Hospital Doctors Appoinmetns",
+    url: formatUrl("Hospital Doctors Appoinmetns"),
     type: "Frontend",
     frameWork: "React",
   },
-  { projectName: "Meme Generator", type: "Frontend", frameWork: "React" },
-  { projectName: "Music Player App", type: "Frontend", frameWork: "React" },
+  {
+    projectName: "Meme Generator",
+    url: formatUrl("Meme Generator"),
+    type: "Frontend",
+    frameWork: "React",
+  },
+  {
+    projectName: "Music Player App",
+    url: formatUrl("Music Player App"),
+    type: "Frontend",
+    frameWork: "React",
+  },
   {
     projectName: "Quiz App",
+    url: formatUrl("Quiz App"),
     type: "Frontend",
     frameWork: "React",
     urlDeploy: "https://65f26f873063436be2709b81--quiz-app-ali.netlify.app",
   },
   {
     projectName: "Books Store",
+    url: formatUrl("Books Store"),
     type: "Frontend",
     frameWork: "React",
     urlDeploy: "https://books-store.pages.dev/cart",
   },
-  { projectName: "Calculatur", type: "Frontend", frameWork: "React" },
+  {
+    projectName: "Calculatur",
+    url: formatUrl("Calculatur"),
+    type: "Frontend",
+    frameWork: "React",
+  },
   {
     projectName: "Pizza App",
+    url: formatUrl("Pizza App"),
     type: "Frontend",
     frameWork: "React",
     urlDeploy: "https://react-pizza-cart.pages.dev/",
@@ -140,6 +175,7 @@ const publicProjects: IProjects[] = [
     urlDeploy: "https://dictionary.ksaa.gov.sa",
   },
 ];
+
 function MyProjects() {
   const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
@@ -205,7 +241,7 @@ function MyProjects() {
           </Accordion>
         </Center>
         <Center>
-          <Heading size="lg">Private Projects:</Heading>
+          <Heading size="lg">Personal Projects:</Heading>
         </Center>
         <Center>
           <Accordion w={["100%", "100%", "75%", "50%"]}>
@@ -228,9 +264,11 @@ function MyProjects() {
                     justifyContent={"space-between"}
                   >
                     <Box>
-                      <Link href={"https://github.com/Ali7U"}>
-                        <FaGithub />
-                      </Link>
+                      <Tooltip label={"Review the code"} hasArrow>
+                        <Link href={item.url} isExternal>
+                          <FaGithub />
+                        </Link>
+                      </Tooltip>
                     </Box>
                     <Box>
                       type: {item.type} - {item.frameWork}
