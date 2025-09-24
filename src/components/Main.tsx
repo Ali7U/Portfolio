@@ -6,6 +6,7 @@ import {
   Heading,
   Text,
   Button,
+  Link,
 } from "@chakra-ui/react";
 import img from "../assets/Untitled-design-50.webp";
 
@@ -34,7 +35,7 @@ function Main() {
           <Image src={img} />
         </Box>
       </Center>
-      <Center>
+      <Center flexDirection={"column"}>
         <Button
           m={"20px auto"}
           w={150}
@@ -43,9 +44,24 @@ function Main() {
           onClick={() =>
             window.open("https://www.linkedin.com/in/ali-al-guadeb/")
           }
+          _hover={{
+            bg: "whitesmoke",
+            color: "cyan.600",
+          }}
         >
-          My LinkedIn{" "}
+          My LinkedIn
         </Button>
+        <Link href="mailto:alguadeb@gmail.com">
+          <Button
+            m={"20px auto"}
+            w={150}
+            color={"cyan.600"}
+            bg={"whitesmoke"}
+            _hover={{ bg: "cyan.600", color: "whitesmoke" }}
+          >
+            Contact me
+          </Button>
+        </Link>
       </Center>
       <Center>
         <SimpleGrid>
