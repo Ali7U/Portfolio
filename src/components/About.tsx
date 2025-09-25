@@ -1,5 +1,3 @@
-// src/components/Experience.tsx
-import React from "react";
 import {
   Box,
   Heading,

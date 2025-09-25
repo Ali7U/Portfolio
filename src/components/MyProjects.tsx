@@ -12,7 +12,6 @@ import {
   useColorModeValue,
   VStack,
   Center,
-  Divider,
   Image,
   useDisclosure,
   Modal,
@@ -20,7 +19,7 @@ import {
   ModalContent,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 

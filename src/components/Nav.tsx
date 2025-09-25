@@ -4,7 +4,6 @@ import {
   chakra,
   Flex,
   useColorModeValue,
-  VisuallyHidden,
   Text,
   useColorMode,
   IconButton,
