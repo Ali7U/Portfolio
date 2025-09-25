@@ -8,12 +8,12 @@ import {
   Text,
   useColorMode,
   IconButton,
+  Box,
 } from "@chakra-ui/react";
-import { MdDeveloperMode } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { FaSun, FaMoon, FaGithub, FaLinkedin, FaDev } from "react-icons/fa";
 
-export default function App() {
+export default function Nav() {
   const bg = useColorModeValue("white", "gray.800");
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
@@ -29,26 +29,20 @@ export default function App() {
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <Flex>
-            <chakra.a
-              href="/"
-              title="Choc Home Page"
-              display="flex"
-              alignItems="center"
-            >
-              <VisuallyHidden>Choc</VisuallyHidden>
-            </chakra.a>
-            <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-              <MdDeveloperMode />
-              <FaDev />
-            </chakra.h1>
+            <Box fontSize="xl" fontWeight="medium">
+              <FaDev size={32} />
+            </Box>
           </Flex>
-          <Flex alignItems={"center"}>
+          <Flex
+            alignItems={"center"}
+            w={["50%", "30%"]}
+            justifyContent={"space-around"}
+          >
             <Text
               as={"h6"}
               size={"s"}
               cursor={"pointer"}
               fontWeight={"bold"}
-              pr={5}
               fontSize={[14, 16]}
             >
               <Link to={"/"}>Home</Link>
@@ -60,29 +54,33 @@ export default function App() {
               fontWeight={"bold"}
               fontSize={[14, 16]}
             >
-              <Link to={"/my-projects"}>My Projects</Link>
+              <Link to={"/projects"}>Projects</Link>
             </Text>
-            {/* {width >= 370 ? ( */}
+            <Text
+              as={"h6"}
+              size={"s"}
+              cursor={"pointer"}
+              fontWeight={"bold"}
+              fontSize={[14, 16]}
+            >
+              <Link to={"/about"}>About</Link>
+            </Text>
+          </Flex>
+          <Flex w={["25%", "15%"]} justifyContent={"space-between"}>
             <IconButton
               display={["none", "inherit"]}
-              ml="2"
               aria-label=""
               icon={<FaLinkedin />}
               onClick={() =>
                 window.open("https://www.linkedin.com/in/ali-al-guadeb/")
               }
             />
-            {/* ) : (
-              ""
-            )} */}
             <IconButton
-              ml="2"
               aria-label=""
               icon={<FaGithub />}
               onClick={() => window.open("https://github.com/Ali7U")}
             />
             <IconButton
-              ml="8"
               aria-label=""
               icon={isDark ? <FaSun color="orange" /> : <FaMoon color="" />}
               onClick={toggleColorMode}

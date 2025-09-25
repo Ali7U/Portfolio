@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import img from "../assets/Untitled-design-50.webp";
 
-import Experence from "./Experence";
+import Experience from "./About";
 import SkillsGroup from "./shared/SkillsGroup";
 
 function Main() {
@@ -76,7 +76,7 @@ function Main() {
           </Box>
         </SimpleGrid>
       </Center>
-      <Experence />
+      <Experience />
     </>
   );
 }

@@ -69,7 +69,7 @@ const skills = [
   { icon: <SiDotnet fontSize={50} />, label: ".NET", isBack: true },
 
   { icon: <SiPostman fontSize={50} />, label: "Postman", isBack: true },
-  { icon: <SiSwagger fontSize={50} />, label: "Swaagger", isBack: true },
+  { icon: <SiSwagger fontSize={50} />, label: "Swagger", isBack: true },
 ];
 
 export default function SkillsGroup({

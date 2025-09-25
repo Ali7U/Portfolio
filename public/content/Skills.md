@@ -1,0 +1,22 @@
+## My Skills
+
+- HTML5
+- CSS3
+- JavaScript
+- TypeScript
+- React
+- Angular
+- Chakra UI
+- Tailwind CSS
+- Bootstrap
+- Node.js
+- Express
+- Prisma
+- SQL Server
+- MongoDB
+- MySQL
+- PostgreSQL
+- C#
+- .NET
+- Postman
+- Swagger
