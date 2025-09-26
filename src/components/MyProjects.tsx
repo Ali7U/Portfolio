@@ -199,7 +199,7 @@ export default function ProjectsGrid() {
               overflow="hidden"
               borderRadius="md"
               bg={cardBg}
-              w={"80%"}
+              w={["100%", "90%", "80%"]}
               borderWidth="1px"
               borderColor={cardBorder}
               boxShadow="sm"
@@ -220,20 +220,22 @@ export default function ProjectsGrid() {
                 display="flex"
                 alignItems="center"
                 h={p.image ? [415, 440] : 100}
-                justifyContent="center"
+                justifyContent={p.image ? "flex-start" : "center"}
                 pb={3}
                 flexDirection={"column"}
               >
                 {p.image ? (
                   <Box
                     w={"100%"}
-                    overflow={"scroll"}
-                    h={[250, 400]}
+                    overflow="hidden"
+                    h={[250, 400, 420]}
                     onClick={() => handleZoom(`/assets/${p.image}.png`)}
+                    cursor="pointer"
                   >
                     <Image
-                      h={[250, "fit-content"]}
                       src={`/assets/${p.image}.png`}
+                      alt={p.projectName}
+                      height="100%"
                     />
                   </Box>
                 ) : (
@@ -277,7 +279,10 @@ export default function ProjectsGrid() {
                 opacity={0}
                 transition="opacity 0.18s ease, transform 0.18s ease"
                 transform="translateY(6px)"
-                _groupHover={{ opacity: 1, transform: "translateY(0)" }}
+                _groupHover={{
+                  opacity: 1,
+                  transform: "translateY(0)",
+                }}
                 px={3}
               >
                 <HStack spacing={3}>
@@ -288,6 +293,7 @@ export default function ProjectsGrid() {
                         leftIcon={<FaGithub />}
                         bg="whiteAlpha.900"
                         color="black"
+                        boxShadow="lg"
                       >
                         Code
                       </Button>
@@ -300,6 +306,7 @@ export default function ProjectsGrid() {
                         leftIcon={<ExternalLinkIcon />}
                         bg="whiteAlpha.900"
                         color="black"
+                        boxShadow="lg"
                       >
                         Live
                       </Button>
@@ -318,25 +325,31 @@ export default function ProjectsGrid() {
           boxShadow={"none"}
           display={"grid"}
           justifyContent={"center"}
+          alignItems={"center"}
         >
-          <TransformWrapper
-            initialScale={1}
-            minScale={1}
-            maxScale={5}
-            wheel={{ step: 0.2 }}
-            doubleClick={{ mode: "zoomIn" }}
-            pinch={{ step: 5 }}
+          <Box
+            maxW="90vw"
+            maxH="90vh"
+            w="auto"
+            h="auto"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            cursor="zoom-in"
           >
-            <TransformComponent>
-              <Image
-                src={zoomSrc ?? ""}
-                maxH="90vh"
-                maxW="90vw"
-                mx="auto"
-                cursor="grab"
-              />
-            </TransformComponent>
-          </TransformWrapper>
+            <TransformWrapper
+              initialScale={1}
+              minScale={1}
+              maxScale={5}
+              wheel={{ step: 0.2 }}
+              doubleClick={{ mode: "zoomIn" }}
+              pinch={{ step: 5 }}
+            >
+              <TransformComponent>
+                <Image src={zoomSrc ?? ""} maxH="90vh" maxW="90vw" mx="auto" />
+              </TransformComponent>
+            </TransformWrapper>
+          </Box>
         </ModalContent>
       </Modal>
     </Box>
