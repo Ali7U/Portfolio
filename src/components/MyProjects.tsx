@@ -236,6 +236,7 @@ export default function ProjectsGrid() {
                       src={`/assets/${p.image}.png`}
                       alt={p.projectName}
                       height="100%"
+                      w={"100%"}
                     />
                   </Box>
                 ) : (
