@@ -58,7 +58,7 @@ export default function App() {
   }, [route, setPeek]);
 
   let Page: React.FC<any>;
-  if (route === "Projects") Page = ProjectsPage;
+  if (route === "projects") Page = ProjectsPage;
   else if (route === "about") Page = AboutPage;
   else Page = HomePage;
 
