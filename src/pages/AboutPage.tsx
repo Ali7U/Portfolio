@@ -38,7 +38,7 @@ export default function AboutPage({ navigate }: Props) {
               with architectures and exceptional user experiences.
             </p>
           </div>
-          <div className="flex flex-col gap-4 sticky top-27.5">
+          <div className="flex flex-col gap-4 sticky top-27.5 max-[900px]:static">
             <div className="avatar" />
           </div>
           <div className="flex flex-col flex-wrap gap-3">

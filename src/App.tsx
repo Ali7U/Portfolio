@@ -58,7 +58,7 @@ export default function App() {
   }, [route, setPeek]);
 
   let Page: React.FC<any>;
-  if (route === "projects") Page = ProjectsPage;
+  if (route === "Projects") Page = ProjectsPage;
   else if (route === "about") Page = AboutPage;
   else Page = HomePage;
 
@@ -66,10 +66,10 @@ export default function App() {
     <>
       <div className="ambient fixed inset-0 pointer-events-none overflow-hidden z-0" />
       <div className="grain" />
-      <header className="topbar fixed top-6 left-0 right-0 flex items-center justify-center z-50 pointer-events-none px-6">
+      <header className="topbar fixed top-6 left-0 right-0 flex items-center justify-between sm:justify-center z-50 pointer-events-none px-6">
         <a
           href="/home"
-          className="brand"
+          className="brand hidden sm:flex align-center"
           onClick={(e) => {
             e.preventDefault();
             navigate("home");
