@@ -41,8 +41,8 @@ export default function AccentPicker({ accentId, setAccentId, theme }: Props) {
             className={`accent-swatch ${accentId === opt.id ? "active" : ""}`}
             style={{ background: opt[t] }}
             onClick={() => setAccentId(opt.id)}
-            aria-label={opt.label}
-            title={opt.label}
+            aria-label={opt[t === "dark" ? "darkLabel" : "lightLabel"]}
+            title={opt[t === "dark" ? "darkLabel" : "lightLabel"]}
           />
         ))}
       </div>
@@ -69,7 +69,7 @@ export default function AccentPicker({ accentId, setAccentId, theme }: Props) {
                 className="accent-dropdown-swatch w-4.5 h-4.5 rounded-full shrink-0"
                 style={{ background: opt[t] }}
               />
-              <span className="accent-dropdown-label flex-1">{opt.label}</span>
+              <span className="accent-dropdown-label flex-1">{opt[t === "dark" ? "darkLabel" : "lightLabel"]}</span>
               {accentId === opt.id && (
                 <svg
                   width="14"

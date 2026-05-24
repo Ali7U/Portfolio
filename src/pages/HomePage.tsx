@@ -79,7 +79,7 @@ export default function HomePage({ navigate }: Props) {
         <div className="flex gap-3 mt-9 flex-wrap">
           <MagneticButton
             className="btn-primary"
-            onClick={() => navigate("Projects")}
+            onClick={() => navigate("projects")}
           >
             See selected projects
             <svg

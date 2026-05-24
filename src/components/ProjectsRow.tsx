@@ -7,17 +7,10 @@ interface Props {
 }
 
 export default function ProjectsRow({ project, idx, onClick }: Props) {
-  const handleClick = () => {
-    if (project.github) {
-      window.open(project.github, "_blank", "noopener,noreferrer");
-    }
-    onClick?.();
-  };
-
   return (
     <div
       className="Projects-row group py-7 px-2 hover:pl-6 hover:pr-6 hover:bg-(--glass) cursor-pointer"
-      onClick={handleClick}
+      onClick={onClick}
     >
       <span className="idx text-xs">{String(idx + 1).padStart(2, "0")}</span>
       <div>

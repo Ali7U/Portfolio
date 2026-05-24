@@ -6,6 +6,7 @@ export interface PortfolioProject {
   desc: string;
   image?: string;
   github?: string;
+  url?: string;
 }
 
 export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
@@ -17,6 +18,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     desc: "E-commerce storefront built with Angular 18 and PrimeNG, consuming the Fake Store API. Features product browsing, cart management, and a clean component-driven UI.",
     image: "/assets/Fake-Store.png",
     github: "https://github.com/Ali7U/Fake-Store",
+    url: "https://fake-store-app-angular.netlify.app/",
   },
   {
     id: "email",
