@@ -1,5 +1,7 @@
 import Footer from "../components/Footer";
 import MagneticButton from "../components/MagneticButton";
+import TerminalIntro from "../components/TerminalIntro";
+import Reveal from "../components/Reveal";
 
 interface Props {
   navigate: (r: string) => void;
@@ -27,20 +29,23 @@ export default function AboutPage({ navigate }: Props) {
           </MagneticButton>
         </div>
         <div className="grid grid-cols-[1.2fr_1fr] gap-15 items-start mt-15 max-[900px]:grid-cols-1">
-          <div>
+          <Reveal>
             <h2 className="text-[clamp(40px,5vw,84px)] tracking-[-0.04em] leading-none mb-8">
               Engineer who build
               <br />
-              products that feel right.
+              applications that feel right.
             </h2>
             <p className="text-[17px] leading-[1.65] mb-5 max-w-[50ch] text-(--fg-dim)">
               Software Engineer building scalable, high-performance applications
               with architectures and exceptional user experiences.
             </p>
-          </div>
-          <div className="flex flex-col gap-4 sticky top-27.5 max-[900px]:static">
-            <div className="avatar" />
-          </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="flex flex-col gap-4 sticky top-27.5 max-[900px]:static">
+              <div className="avatar" />
+              <TerminalIntro />
+            </div>
+          </Reveal>
           <div className="flex flex-col flex-wrap gap-3">
             <div className="info-card">
               <span className="eyebrow mb-3.5 block">Reach me</span>

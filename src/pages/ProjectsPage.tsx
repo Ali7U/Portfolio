@@ -73,6 +73,17 @@ export default function ProjectsPage({ navigate, accent }: Props) {
                   className="Projects-card relative cursor-pointer"
                   key={p.id}
                   onClick={() => handleCardClick(p)}
+                  style={{ perspective: "800px" }}
+                  onMouseMove={(e) => {
+                    const card = e.currentTarget;
+                    const { left, top, width, height } = card.getBoundingClientRect();
+                    const x = (e.clientX - left) / width - 0.5;
+                    const y = (e.clientY - top) / height - 0.5;
+                    card.style.transform = `rotateY(${x * 12}deg) rotateX(${-y * 12}deg) scale(1.02)`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "";
+                  }}
                 >
                   <div className="cover aspect-16/10 relative overflow-hidden">
                     {p.image ? (

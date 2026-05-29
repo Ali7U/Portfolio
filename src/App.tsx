@@ -25,9 +25,7 @@ export default function App() {
       try {
         const id = JSON.parse(stored);
         if (ACCENT_OPTIONS.some((o) => o.id === id)) return id;
-      } catch {
-        /* ignore */
-      }
+      } catch { /* ignore */ }
     }
     return "indigo";
   });
@@ -78,11 +76,7 @@ export default function App() {
           <span className="dot" />
           <span>ali_alguadeb</span>
         </a>
-        <AccentPicker
-          accentId={accentId}
-          setAccentId={setAccentId}
-          theme={theme}
-        />
+        <AccentPicker accentId={accentId} setAccentId={setAccentId} theme={theme} />
         <NavPill route={route} navigate={navigate} />
         <ThemeToggle theme={theme} setTheme={setTheme} />
       </header>
