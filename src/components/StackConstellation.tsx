@@ -44,6 +44,16 @@ export default function StackConstellation() {
 
   const active = hovered ?? pinned;
 
+  useLayoutEffect(() => {
+    const onDocClick = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setPinned(null);
+      }
+    };
+    document.addEventListener("mousedown", onDocClick);
+    return () => document.removeEventListener("mousedown", onDocClick);
+  }, []);
+
   const resolvePlace = (id: string): "top" | "bottom" | "left" | "right" => {
     const el = chipRefs.current.get(id);
     if (!el) return "top";
@@ -155,7 +165,6 @@ export default function StackConstellation() {
       <Tooltip
         id="constellation-tooltip"
         place={tooltipPlace}
-        openOnClick
         render={({ activeAnchor }) => {
           const id = activeAnchor?.getAttribute("data-tooltip-tech");
           const tech = STACK.find((t) => t.id === id);
